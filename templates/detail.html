@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Halaman Utama</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  float: left;
+  width: 100%;
+  height: 100%; 
+  background-image: radial-gradient(  #DCF3F2, #DCF3F2);
+  text-align: center;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {border-radius: 25px; width: 100%; height: 95%; }
+
+input[type=text] {
+  width: 40%;
+  height: 35px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #D3D3D3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+  height: 35px;
+}
+
+
+.button:hover {background-color: #D3D3D3}
+
+.button:active {
+  background-color: #D3D3D3;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  height:25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+}
+
+.fa-twitter {
+  color: white;
+}
+
+.fa-linkedin {
+  color: white;
+}
+
+.fa-youtube {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
+
+
+footer {
+  background-color: #004376;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-family: Cambria Math;
+}
+
+@media (max-width: 600px) {
+  nav, form {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+</head>
+<body style="background-color: #DCF3F2">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CollectingStar</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('index')}}">Home</a></li>
+      <li class="active"><a href="#">Detail</a></li>
+      <li><a href="{{url_for('about')}}">About Us</a></li>
+    </ul>
+  </div>
+  <img src="/static/images/imghead.png" style="width: 100%; margin-top: 1px;">
+</nav>
+<section>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2);">
+        <div class = "container" style="background-color: #F4D298; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #997C31; font-weight: bold; font-size: 25px; text-align: center;">Daun Normal</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/healthy.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px;"> Berikut adalah gambar untuk daun yang sehat dan normal. Dapat kita lihat bahwa daun yang sehat memiliki warna hijau segar tanpa adanya bercak berwarna coklat yang diakibatkan karena adanya serangan virus atau bakteri. Sehingga gambar daun tomat diatas dapat dikatakan bebas dari penyakit daun. </br></br></br></br></br></br></br></label>
+          </div>
+    </nav>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #A2F2CF; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #2F8288; font-weight: bold; font-size: 25px">Target Spot</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/Target Spot.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Gambar di atas merupakan daun yang yang terinfeksi jamur pathogen Stemphyllium, S. solani, S. lycopersici, S. botryosum, dan S. vesicarium. Penyakit di atas dapat ditangani dengan : </br>
+              1.  Gunakan campuran pot bebas patogen </br>
+              2.  Tempatkan persemaian jauh dari lahan produksi </br>
+              3.  Sirami bibit di pagi hari agar tanaman mengering sebelum malam tiba, dan hindari penyiraman pada hari mendung </br>
+              4.  Tanaman bergejala harus dibuang dan dimusnahkan </br>
+              5.  Disinfeksi alat dan permukaan di rumah kaca sebelum memulai tanaman transplantasi baru </br></label>
+          </div>
+    </nav>
+</section>
+
+<section>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #A2F2CF; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #2F8288; font-weight: bold; font-size: 25px">Mosaic Virus</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/Mosaic Virus.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Tomato Mosaic Virus (ToMV) adalah Tobamovirus yang disebarkan melalui benih, pencangkokan buatan, dan penanganan manusia. Infeksi terjadi ketika virus masuk ke tanaman melalui luka sekecil rambut tanaman yang robek. Virus ini juga dapat ditularkan melalui benih. Penyakit di atas dapat ditangani dengan :</br>
+              1.  Perhatikan gejala sepanjang musim tanam</br>
+              2.  Segera buang tanaman yang terinfeksi</br>
+              3.  Gunakan benih yang bebas penyakit</label>
+          </div>
+    </nav>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #F4D298; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #997C31; font-weight: bold; font-size: 25px">Yellow Leaf Curl Virus</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/yellow leaf curl virus.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Tomato yellow leaf curl virus (TYLCV) adalah salah satu begomovirus penginfeksi tomat yang paling terkenal dan ditularkan oleh Bemisia tabaci. Penyakit di atas dapat ditangani dengan :</br>
+              1.  Menghilangkan lalat putih </br>
+              2.  Membunuh gulma menengah dan mengubah musim budidaya </br>
+              3.  Teknik pengendalian kimia dan biologi untuk pengelolaan hama terpadu </br>
+              4.  Mengurangi populasi dan migrasi vektor kutu kebul </label>
+          </div>
+    </nav>
+</section>
+
+<section>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #F4D298; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #997C31; font-weight: bold; font-size: 25px">Bacterial Spot</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/bacterial spot.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Bacterial Spot merupakan penyakit pada tomat yang disebabkan oleh bakteri Xanthomonas spp. & Pseudomonas syringae pv. tomato. Gejalanya dapat dilihat pada daun, batang, dan buah tomat. Bacterial Spot menghasilkan luka yang sama pada buah seperti yang terjadi pada daun dan akhirnya menjadi kasar, menjadi coklat dan berkeropeng. Setelah tanaman terinfeksi, penyakit ini sangat sulit dikendalikan dan dapat menyebabkan kerugian panen total. Penyakit di atas dapat ditangani dengan :</br>
+              1.  Perendaman benih selama satu menit dalam natrium hipoklorit atau dalam air panas (50°C) selama 25 menit </br>
+              2.  Bakterisida yang mengandung tembaga dapat digunakan sebagai pelindung dan memberikan pengendalian penyakit parsial </br>
+              3.  Jika penyakit terjadi di awal musim, pertimbangkan untuk menghancurkan seluruh tanaman</label>
+          </div>
+    </nav>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #A2F2CF; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #2F8288; font-weight: bold; font-size: 25px">Early Blight</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/early blight.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Early Blight adalah penyakit tomat yang disebabkan oleh jamur Alternaria solani. Penyakit di atas dapat ditangani dengan : </br>
+              1.  Gunakan bibit dari sumber tepercaya dan periksa semua tanaman sebelum menanamnya </br>
+              2.  Sediakan banyak ruang untuk tanaman. Aliran udara yang baik akan membantu menjaga tanaman tetap kering </br>
+              3.  Gunakan fungisida yang mengandung bahan aktif Penthiopyrad atau Boscalid </br>
+              4.  Membersihkan semua sisa tanaman di akhir musim </br>
+              5.  Jika tanaman mengalami wabah penyakit ini, cari tempat lain untuk menanam tomat tahun depan tahun depan </br></br></br></label>
+          </div>
+    </nav>
+</section>
+
+<section>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #A2F2CF; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #2F8288; font-weight: bold; font-size: 25px">Late Blight</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/late blight.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Late Blight adalah penyakit pada tomat yang disebabkan oleh patogen oomycete Phytophthora infestans (P. infestans). Spora dapat menyebar dengan mudah melalui irigasi, peralatan, angin dan hujan dan dapat tertiup ke ladang tetangga dalam jarak 5-10 mil atau lebih, sehingga memulai siklus penyakit lainnya. Penyakit di atas dapat ditangani dengan : </br>
+              1.  Tanam di awal musim untuk menghindari tekanan penyakit yang tinggi di akhir musim </br>
+              2.  Jangan biarkan air tetap berada di daun untuk waktu yang lama </br>
+              3.  Pantau tanaman sesering mungkin dan singkirkan tanaman yang terinfeksi, buah yang terinfeksi, dan gulma </br>
+              4.  Lindungi tanaman dengan fungisida </br></br></br></br></br></label>
+          </div>
+    </nav>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #F4D298; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #997C31; font-weight: bold; font-size: 25px">Leaf Mold</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/leaf mold.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Tomato leaf mold disebabkan oleh jamur patogen yang disebut Passalora fulva (syn. Cladosporium fulvum). Jamur menghasilkan konidia yang menginfeksi permukaan bawah daun. Saat mendarat di daun, jamur memasuki stomata tanaman yang digunakan untuk pertukaran gas. Stomata menjadi tersumbat dan tanaman tomat tidak dapat bernafas dengan baik, mengakibatkan layu, defoliasi, dan infeksi. Penyakit di atas dapat ditangani dengan : </br>
+              1.  Singkirkan tanaman yang sakit dan tanaman di sekitarnya untuk mencegah penyebaran patogen </br>
+              2.  Sterilkan semua peralatan yang digunakan untuk perawatan tanaman</br>
+              3.  Pastikan benih bersih dan dibeli dari sumber yang memiliki kualitas yang baik</br>
+              4.  Menerapkan perawatan kimia</br>
+              5.  Menerapkan metode pengendalian untuk penanam konvensional meliputi produk Quadris Top, yang mengandung azoxystrobin dan difenoconazole atau produk seperti Bravo Weather Stik, yang mengandung chlorothalonil</label>
+          </div>
+    </nav>
+</section>
+
+<section>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #F4D298; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #997C31; font-weight: bold; font-size: 25px">Septoria Leaf Spot</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/septoria leaf spot.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Septoria leaf spot disebabkan oleh jamur, Septoria lycopersici. Ini adalah salah satu penyakit daun tomat yang paling merusak dan sangat parah di daerah yang memiliki cuaca basah dan lembab bertahan untuk waktu yang lama. Penyakit di atas dapat ditangani dengan : </br>
+              1. Buang daun yang sakit. Jika terdeteksi lebih awal, daun bagian bawah yang terinfeksi dapat dicabut dan dibakar atau dimusnahkan</br>
+              2. Memperbaiki sirkulasi udara di sekitar tanaman</br>
+              3. Mulsa di sekitar pangkal tanaman. Mulsa akan mengurangi percikan tanah, yang mungkin mengandung spora jamur yang terkait dengan kotoran</br>
+              4. Gunakan selang hujan di pangkal tanaman untuk menjaga dedaunan tetap kering</br>
+              5. Kontrol gulma</br>
+              6. Gunakan semprotan fungisida. Terapkan pada interval 7 hingga 10 hari sepanjang musim. Oleskan chlorothalonil, maneb, macozeb, atau fungisida berbahan dasar tembaga, seperti campuran Bordeaux, tembaga hidroksida, tembaga sulfat, atau tembaga oksiklorida sulfat</label>
+          </div>
+    </nav>
+    <nav style="float: left; width: 50%; height: 100%; background-image: radial-gradient(  #AEC6EB, #DCF3F2); text-align: center;">
+        <div class = "container" style="background-color: #A2F2CF; width: 95%; height: 40px; font-family: Perpetua Titling MT; color: #2F8288; font-weight: bold; font-size: 25px">Spider Mites Two Spotted</div>
+          <div class="container" style="width: 95%; height: 87%; background-color: #FFFFFF; margin-bottom: 10px;"> 
+              <img src="/static/images/spider mittes.jpg" style="width: 40%; padding: 2%;"> </br>
+              <label for="lname" style="font-family:Myanmar Text; font-weight: inherit; color: #707070; text-align: justify; padding : 15px"> Wabah sering disebabkan oleh penggunaan insektisida spektrum luas yang mengganggu banyak musuh alami yang membantu mengelola populasi tungau Tetranychus urticae. Kerusakan sering diremehkan karena luka dan hama tidak terlihat oleh mata kita tanpa pemeriksaan yang cermat. Daun menjadi bercak kuning pucat, bintik-bintik coklat kemerahan mulai dari area kecil hingga besar di permukaan daun atas dan bawah. Penyakit di atas dapat ditangani dengan :</br>
+              1.  Hindari lahan berumput dan jangan menanam terung di dekat tanaman hijauan legum</br>
+              2.  Jangan memberi pupuk secara berlebihan. Wabah dapat diperburuk oleh pemupukan nitrogen berlebih</br>
+              3.  Pelepasan tungau pemangsa secara preventif, Phytoseiulus persimilis, dapat menekan populasi TSSM di ladang sayuran </br></br></br></br></label>
+          </div>
+    </nav>
+</section>
+
+<footer>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <a href="#" class="fa fa-youtube"></a>
+  <a href="#" class="fa fa-instagram"></a>
+  </br>
+  </br>
+  <h4>Our Team :</h4>
+  <p>Diah Pingkan Sari &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dwiky Alfian Tama</p>
+
+    <p>&copy; CollectingStar Team 2022</p>
+</footer>
+
+</body>
+</html>
+
